@@ -25,7 +25,7 @@ class GithubController extends Controller
             $service = GithubService::getInstance();
             $service->saveCache();
         } catch (Exception $e) {
-            throw new Exception();
+            throw $e;
         }
 
         return ExitCode::OK;
