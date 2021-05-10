@@ -52,7 +52,7 @@ abstract class GithubCache
      */
     public static function isEmpty(): bool
     {
-        return empty(self::load());
+        return !Yii::$app->cache->exists(self::GLOBAL_KEY);
     }
 
     /**
